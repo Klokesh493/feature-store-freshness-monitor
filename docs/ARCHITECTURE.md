@@ -4,11 +4,14 @@ Checks ML feature freshness and flags stale feature groups before serving incide
 
 ```mermaid
 flowchart LR
-    N0["sample_features.csv"]
-    N1["freshness_monitor.py"]
-    N2["stale / stale groups"]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Feature age and maximum allowed age"]
+    B["Compare each feature group to its freshness limit"]
+    C{"Age exceeds limit?"}
+    D["Emit stale feature group"]
+    E["Omit fresh group"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
 ```
 
 ## Operational boundaries
