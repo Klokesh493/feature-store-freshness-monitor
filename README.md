@@ -22,6 +22,10 @@ python3 -m unittest discover . -v
 
 Run `make verify` with Make and Python 3 installed. The target runs the documented sample through the project CLI. It also runs the existing Python unit tests.
 
+## Business problem
+
+A model can keep serving requests with stale features. Operators need to flag feature groups whose age exceeds their contract.
+
 ## Project walkthrough
 
 ```mermaid

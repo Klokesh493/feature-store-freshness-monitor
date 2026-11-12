@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Checks ML feature freshness and flags stale feature groups before serving incidents.
+A model can keep serving requests with stale features. Operators need to flag feature groups whose age exceeds their contract.
 
 ## Reproduce the workflow
 
